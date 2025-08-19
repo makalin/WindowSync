@@ -26,7 +26,37 @@ WindowSync enhances productivity by maintaining your preferred workspace across 
 
 ## Installation
 
-WindowSync is currently in development. Stay tuned for release updates. Once available, it will be distributed via the Mac App Store and as a direct download from Github.
+### Prerequisites
+
+- **macOS 13.0 (Ventura) or later**
+- **Xcode 15.0 or later** (available from the Mac App Store)
+
+### Build from Source
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/makalin/WindowSync.git
+   cd WindowSync
+   ```
+
+2. **Build and run:**
+   ```bash
+   make build && make run
+   ```
+
+   Or open in Xcode:
+   ```bash
+   open WindowSync.xcodeproj
+   ```
+
+For detailed build instructions, see [BUILD_INSTRUCTIONS.md](BUILD_INSTRUCTIONS.md).
+
+### Distribution
+
+WindowSync will be distributed via:
+- Mac App Store (once available)
+- Direct download from GitHub releases
+- Homebrew (planned)
 
 ## Usage
 
@@ -55,6 +85,42 @@ Once released, using WindowSync will be straightforward:
   - Advanced features: App exclusion, time-based defaults, macOS Spaces integration.
 - **v1.2 (Future)**:
   - Enhanced UI/UX, additional customization options.
+
+## Development
+
+### Building
+
+```bash
+# Build release version
+make build
+
+# Build debug version
+make debug
+
+# Run tests
+make test
+
+# Clean build artifacts
+make clean
+
+# Show all available targets
+make help
+```
+
+### Project Structure
+
+```
+WindowSync/
+├── WindowSync.xcodeproj/     # Xcode project
+├── WindowSync/               # Source code
+│   ├── Models/              # Data models
+│   ├── Managers/            # Business logic
+│   ├── Extensions/          # Swift extensions
+│   └── Assets.xcassets/     # App assets
+├── Tests/                   # Unit tests
+├── Package.swift            # Swift Package Manager
+└── Makefile                 # Build automation
+```
 
 ## Contributing
 
